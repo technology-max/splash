@@ -5,16 +5,5 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "body-parser": "^2.2.0",
-    "dotenv": "^17.2.3",
-    "express": "^5.1.0",
-    "node-fetch": "^2.7.0",
-    "stripe": "^19.1.0"
   }
 }
