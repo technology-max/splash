@@ -1,4 +1,5 @@
 'use strict';
+require('dotenv').config();
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -130,7 +131,7 @@ async function handleStripeEvent(event) {
     return;
   }
 
-  const updated = await stripe.paymentIntents.update(paymentIntentId, {
+  /*const updated = await stripe.paymentIntents.update(paymentIntentId, {
     description,
     metadata: {
       // keep this linkage for future audits/searching
@@ -138,7 +139,7 @@ async function handleStripeEvent(event) {
       squarespace_order_number: String(order.orderNumber || ''),
       product_count: String(names.length)
     }
-  });
+  });*/
 
   console.log(`✅ Updated PI ${updated.id} description → "${description}"`);
 }
